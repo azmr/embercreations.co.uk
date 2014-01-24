@@ -1,0 +1,9 @@
+html{
+	font-family: sans-serif;
+}
+html *{
+	margin: auto auto;
+}
+.logo{
+	font-size: 3rem;
+}
