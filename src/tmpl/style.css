@@ -1,0 +1,13 @@
+body{
+	font-family: sans-serif;
+}
+
+h1{
+	display: block;
+	margin: 0 auto;
+}
+
+.content{
+	max-width: 900px;
+	margin: 0 auto;
+}
