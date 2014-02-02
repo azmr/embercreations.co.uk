@@ -107,5 +107,5 @@ func configLogger(filename string, prefix string, flags int) {
 func main() {
 	configLogger("log.txt", "", log.Ldate|log.Ltime|log.Lshortfile)
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe("embercreations.co.uk:8080", nil))
 }
