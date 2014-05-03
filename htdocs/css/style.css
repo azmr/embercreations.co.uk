@@ -1,9 +1,35 @@
 html{
-	font-family: sans-serif;
+	font-family:sans-serif;
 }
 html *{
-	margin: auto auto;
+	margin:auto auto;
 }
+header{
+	margin: 0 auto;
+}
+nav>ul{
+	padding:0;
+}
+nav>ul>li{
+	display:inline-block;
+	font-size:1.3rem;
+	list-style:none outside none;
+}
+
+.coming-soon{
+	color:#444;
+}
+
+a{
+	color:#111;
+	font-weight:bold;
+}
+a:hover{color:#833;}
+a.coming-soon:hover:after{content:" - coming soon";}
+
 .logo{
-	font-size: 3rem;
+	fill:#222;
+}
+.logo:hover{
+	fill:#833;
 }
