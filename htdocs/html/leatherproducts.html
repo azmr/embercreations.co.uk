@@ -1,0 +1,48 @@
+<section>
+<h1>Leather Products</h1>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+        method="post">
+
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="orders@embercreations.co.uk">
+
+    <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="add" value="1">
+
+    <!-- Specify details about the item that buyers will purchase. -->
+    Leather Belt
+    <input type="hidden" name="item_name"
+        value="Leather Belt">
+    <input type="hidden" name="amount" value="3.95">
+    <input type="hidden" name="currency_code" value="GBP">
+
+    <!-- Provide a dropdown menu option field, without prices. -->
+    <input type="hidden" name="on0" value="Colour">Colour
+        <label class="visual-choice" >
+            <input type="radio" name="os0" value="Natural">
+            <img src="http://placehold.it/80" alt="Natural">
+        </label>
+        <label class="visual-choice" >
+            <input type="radio" name="os0" value="Saddle Tan">
+            <img src="http://placehold.it/80" alt="Saddle Tan">
+        </label>
+        <label class="visual-choice" >
+            <input type="radio" name="os0" value="Mahogany">
+            <img src="http://placehold.it/80" alt="Mahogany">
+        </label>
+        <label class="visual-choice" >
+            <input type="radio" name="os0" value="Dark Brown">
+            <img src="http://placehold.it/80" alt="Dark Brown">
+        </label>
+
+    <!-- Continue shopping on the webpage for birthday cards -->
+    <input type="hidden" name="shopping_url"
+           value="http://embercreations.co.uk/leather">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit" border="0"
+           src="http://placehold.it/100x30/883333/eeeeee"
+        alt="Add to Cart">
+</form>
+</section>
