@@ -1,47 +1,76 @@
 html{
-	font-family:sans-serif;
+  font-family:sans-serif;
 }
 html *{
-	margin:auto auto;
+  margin:auto auto;
 }
 header{
-	margin: 0 auto;
+  margin: 0 auto;
 }
 nav>ul{
-	padding:0;
+  padding:0;
 }
 nav>ul>li{
-	display:inline-block;
-	font-size:1.3rem;
-	list-style:none outside none;
+  display:inline-block;
+  font-size:1.3rem;
+  list-style:none outside none;
 }
 
 .coming-soon{
-	color:#444;
+  color:#444;
 }
 
 a{
-	color:#111;
-	font-weight:bold;
+  color:#111;
+  font-weight:bold;
 }
 a:hover{color:#833;}
 a.coming-soon:hover:after{content:" - coming soon";}
 
 .logo{
-	fill:#222;
+  fill:#222;
 }
 .logo:hover{
-	fill:#833;
+  fill:#833;
 }
 
-/* makes img radio options better; TODO: svg*/
-label.visual-choice > input[type=radio]{
- display: none;
+/* makes elements expandable */
+.product{
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  margin: 0.5em;
+  background-color: #e4e4e4;
 }
-label.visual-choice > input[type=radio] + img{
+.product form{
+  margin: 0.5em;
+}
+.expandable{
+  cursor: ne-resize;
+}
+.expandable h1{
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+  background-color: #d0d0d0;
+}
+input.expand{
+  display: none;
+}
+input.expand ~ .visible-unexpanded ~ *{
+  display: none;
+}
+input.expand:checked ~ .visible-unexpanded ~ *{
+  display: block;
+}
+
+
+/* makes img radio options better; TODO: svg*/
+label.visual-choice>input[type=radio]{
+  display: none;
+}
+label.visual-choice>input[type=radio] + img{
   cursor: pointer;
   border: 2px solid transparent;
 }
-label.visual-choice > input[type=radio]:checked + img{
+label.visual-choice>input[type=radio]:checked + img{
   border: 2px solid #833
 }
