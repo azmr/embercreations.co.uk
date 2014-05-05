@@ -6,8 +6,8 @@ html *{
   margin:auto auto;
 }
 header{
-  margin: 0 auto;
-  background-color: #e4e4e4;
+  margin:0 auto;
+  background-color:#e4e4e4;
 }
 header a{
   text-decoration:none;
@@ -42,44 +42,45 @@ a.coming-soon:hover:after{content:" - coming soon";}
 }
 
 /* products */
-.product{
-  border: 2px solid #bbb;
-  border-radius: 6px;
-  margin: 0.5em;
-  background-color: #e4e4e4;
+article.product{
+  border:2px solid #bbb;
+  border-radius:6px;
+  margin:0.5em;
+  background-color:#e4e4e4;
+  display:inline-block;
 }
 .product form{
-  margin: 0.5em;
+  margin:0.5em;
 }
 
 /* makes elements expandable */
-.expandable{
-  cursor: ne-resize;
-}
 .expandable h1{
-  padding: 0.2em;
-  margin-bottom: 0.5em;
-  background-color: #d0d0d0;
+  padding:0.2em;
+  padding-right:0.4em;
+  background-color:#d0d0d0;
 }
 input.expand{
-  display: none;
+  display:none;
 }
-input.expand ~ .visible-unexpanded ~ *{
-  display: none;
+input.expand+article.expandable>.expander{
+  cursor:pointer;
 }
-input.expand:checked ~ .visible-unexpanded ~ *{
-  display: block;
+input.expand+article.expandable>.expandee{
+  display:none;
+}
+input.expand:checked+article.expandable>.expandee{
+  display:block;
 }
 
 
-/* makes img radio options better; TODO: svg */
+/* makes img radio options better; TODO:svg */
 label.visual-choice>input[type=radio]{
-  display: none;
+  display:none;
 }
 label.visual-choice>input[type=radio] + img{
-  cursor: pointer;
-  border: 2px solid transparent;
+  cursor:pointer;
+  border:2px solid transparent;
 }
 label.visual-choice>input[type=radio]:checked + img{
-  border: 2px solid #833
+  border:2px solid #833
 }
