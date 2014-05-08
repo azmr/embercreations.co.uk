@@ -14,7 +14,7 @@ border     | #b0b0b0
 
 html{
   font-family:sans-serif;
-  background-color:#ececec;
+  background-color:#f4f0ee;
 }
 html *{
   margin:auto auto;
@@ -39,6 +39,7 @@ header a{
 header h1, header nav{
   text-align:center;
 }
+
 /* general */
 a{
   color:#424242;
@@ -81,6 +82,7 @@ nav li a{
   padding:0.2rem 0.4rem;
   border-radius:0.2rem 0.2rem 0 0;
 }
+
 /* logo */
 svg.logo{
   width:100%;
@@ -94,7 +96,6 @@ svg.logo:hover{
   stroke:#994433;
   stroke-width:5;
 }
-
 /* products */
 article.product{
   border:2px solid #b0b0b0;
@@ -106,6 +107,13 @@ article.product{
 .product form{
   margin:0.5rem;
 }
+.product h1{
+  font-size:1.4rem;
+}
+.product h2{
+  font-size:1.2rem;
+  margin:0.6rem 0 0.4rem 0;
+}
 
 /* makes elements expandable */
 .expandable h1{
@@ -113,19 +121,42 @@ article.product{
   padding-right:0.4rem;
   background-color:#d0d0d0;
 }
+.expandable h1:hover{
+    background-color:#b0b0b0;
+}
+.expander{
+  cursor:pointer;
+}
 input.expand{
   display:none;
 }
-input.expand+article.expandable>.expander{
-  cursor:pointer;
-}
-input.expand+article.expandable>.expandee{
+input.expand~.expandee{
+  /* '~' for graceful degradation */
   display:none;
 }
-input.expand:checked+article.expandable>.expandee{
+input.expand:checked~.expandee{
   display:block;
 }
 
+/* forms */
+form{
+  text-align:left;
+}
+input{
+  display:inline-block;
+  padding:0.2rem;
+  margin:0 auto;
+}
+input[type="submit"]{
+  display:block;
+  margin:0.2rem 0 0 auto;
+  padding:0.4rem;
+  border: 0.16rem solid #b0b0b0;
+  border-radius:0.2rem;
+  background-color:#994433;
+  color:#ececec;
+  font-weight:bold;
+}
 
 /* makes img radio options better; TODO:svg */
 label.visual-choice>input[type=radio]{
@@ -137,4 +168,7 @@ label.visual-choice>input[type=radio] + img{
 }
 label.visual-choice>input[type=radio]:checked + img{
   border:2px solid #994433
+}
+label img{
+  display:inline-block;
 }

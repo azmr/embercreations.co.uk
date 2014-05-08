@@ -1,7 +1,7 @@
 <section class="products">
     <h1>Leather Products</h1>
-    <input type="checkbox" id="leather-belt-expand" class="expand" checked>
     <article class="leather belt product expandable">
+        <input type="checkbox" id="leather-belt-expand" class="expand" checked>
         <label for="leather-belt-expand" class="expander">
             <h1>Leather Belt</h1>
         </label>
@@ -25,7 +25,7 @@
             <!-- Provide a dropdown menu option field, without prices. -->
             <input type="hidden" name="on0" value="Colour">
             <label class="visual-choice" >
-                <input type="radio" name="os0" value="Natural">
+                <input type="radio" name="os0" value="Natural" checked>
                 <img src="http://placehold.it/80" alt="Natural">
             </label>
             <label class="visual-choice" >
@@ -41,17 +41,17 @@
                 <img src="http://placehold.it/80" alt="Dark Brown">
             </label>
 
-            <h2>Length</h2>
-            <input type="hidden" name="on1" value="Length">
-            <input type="number">
-            <!-- Continue shopping on the webpage for birthday cards -->
+            <h2>Hip/Waist Circumference</h2>
+            <input type="hidden" name="on1" value="Length (cm)">
+            <span class="measurement"><input type="number" name="os1" value="90">&nbsp;cm</input></span>
+
+
+        <!-- Continue shopping on the webpage -->
             <input type="hidden" name="shopping_url"
                    value="http://embercreations.co.uk/leather">
 
             <!-- Display the payment button. -->
-            <input type="image" name="submit" border="0"
-                   src="http://placehold.it/100x30/883333/eeeeee"
-                   alt="Add to Cart">
+            <input class="cart" type="submit" name="submit" value="Add to Cart">
         </form>
     </article>
 </section>
