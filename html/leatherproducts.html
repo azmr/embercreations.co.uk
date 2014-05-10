@@ -1,57 +1,191 @@
+<link rel="stylesheet" href="../css/style.css">
+<!-- product template
+<input type="checkbox" id="-expand" class="expand">
+<article class=" product expandable">
+<label for="-expand" class="expander">
+<h1></h1>
+</label>
+<section class="expandee">
+<p class="product description">
+
+</p>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="business" value="orders@embercreations.co.uk">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="item_name" value="">
+<input type="hidden" name="amount" value=".00">
+<input type="hidden" name="currency_code" value="GBP">
+
+
+<input type="hidden" name="shopping_url" value="http://embercreations.co.uk/leather">
+<input class="cart" type="submit" name="submit" value="Add to Cart">
+</form>
+</section>
+</article>
+-->
 <section class="products">
-    <h1>Leather Products</h1>
-    <article class="leather belt product expandable">
-        <input type="checkbox" id="leather-belt-expand" class="expand" checked>
-        <label for="leather-belt-expand" class="expander">
-            <h1>Leather Belt</h1>
-        </label>
-        <form class="expandee" target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
-              method="post">
+	<h1>Leather Products</h1>
+	<input type="checkbox" id="leather-belt-expand" class="expand" >
+	<article class="leather belt product expandable">
+		<label for="leather-belt-expand" class="expander">
+			<h1>Leather Belt</h1>
+		</label>
+		<section class="expandee">
+			<h2>Description</h2>
+			<p class="product description">
+				Made from soling leather, which is about the toughest leather available. With a solid brass buckle that can be polished again and again if it gets scratched, this belt will be with you for a while.
+			</p>
+			<form class="expandee" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
-            <!-- Identify your business so that you can collect the payments. -->
-            <input type="hidden" name="business" value="orders@embercreations.co.uk">
+				<!-- Identify your business so that you can collect the payments. -->
+				<input type="hidden" name="business" value="orders@embercreations.co.uk">
 
-            <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
-            <input type="hidden" name="cmd" value="_cart">
-            <input type="hidden" name="add" value="1">
+				<!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+				<input type="hidden" name="cmd" value="_cart">
+				<input type="hidden" name="add" value="1">
 
-            <!-- Specify details about the item that buyers will purchase. -->
-            <input type="hidden" name="item_name"
-                   value="Leather Belt">
-            <input type="hidden" name="amount" value="3.95">
-            <input type="hidden" name="currency_code" value="GBP">
+				<!-- Specify details about the item that buyers will purchase. -->
+				<input type="hidden" name="item_name" value="Leather Belt">
+				<input type="hidden" name="amount" value="40.00">
+				<input type="hidden" name="currency_code" value="GBP">
 
-            <h2>Colour</h2>
-            <!-- Provide a dropdown menu option field, without prices. -->
-            <input type="hidden" name="on0" value="Colour">
-            <label class="visual-choice" >
-                <input type="radio" name="os0" value="Natural" checked>
-                <img src="http://placehold.it/80" alt="Natural">
-            </label>
-            <label class="visual-choice" >
-                <input type="radio" name="os0" value="Saddle Tan">
-                <img src="http://placehold.it/80" alt="Saddle Tan">
-            </label>
-            <label class="visual-choice" >
-                <input type="radio" name="os0" value="Mahogany">
-                <img src="http://placehold.it/80" alt="Mahogany">
-            </label>
-            <label class="visual-choice" >
-                <input type="radio" name="os0" value="Dark Brown">
-                <img src="http://placehold.it/80" alt="Dark Brown">
-            </label>
+				<h2>Colour</h2>
+				<input type="hidden" name="on0" value="Colour">
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Natural" checked>
+					<div class="colour natural"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Mahogany">
+					<div class="colour saddle-tan"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Saddle Tan">
+					<div class="colour mahogany"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Dark Brown">
+					<div class="colour dk-brown"></div>
+				</label>
 
-            <h2>Hip/Waist Circumference</h2>
-            <input type="hidden" name="on1" value="Length (cm)">
-            <span class="measurement"><input type="number" name="os1" value="90">&nbsp;cm</input></span>
+				<h2>Hip/Waist Circumference</h2>
+				<input type="hidden" name="on1" value="Length (cm)">
+				<span class="measurement"><input type="number" name="os1" value="90">&nbsp;cm</span>
 
 
-        <!-- Continue shopping on the webpage -->
-            <input type="hidden" name="shopping_url"
-                   value="http://embercreations.co.uk/leather">
+				<!-- Continue shopping on the webpage -->
+				<input type="hidden" name="shopping_url" value="http://embercreations.co.uk/leather">
 
-            <!-- Display the payment button. -->
-            <input class="cart" type="submit" name="submit" value="Add to Cart">
-        </form>
-    </article>
+				<!-- Display the payment button. -->
+				<div class="price">&pound;40.00</div>
+				<input class="cart" type="submit" name="submit" value="Add to Cart">
+			</form>
+		</section>
+	</article>
+	<input type="checkbox" id="leather-notebook-expand" class="expand">
+	<article class="leather notebook product expandable">
+		<label for="leather-notebook-expand" class="expander">
+			<h1>Leather Notebook</h1>
+		</label>
+		<section class="expandee">
+			<p class="product description">
+				Clairefontaine 90gsm paper hand-bound in Horween's Chromexcel leather - the perfect combination for a notebook that looks the business wherever you are. Just the right size to slip into a pocket or handbag and take with you everywhere.
+			</p>
+			<form class="expandee" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="business" value="orders@embercreations.co.uk">
+				<input type="hidden" name="cmd" value="_cart">
+				<input type="hidden" name="add" value="1">
+				<input type="hidden" name="item_name" value="Pocket Leather Notebook">
+				<input type="hidden" name="amount" value="15.00">
+				<input type="hidden" name="currency_code" value="GBP">
+
+				<input type="hidden" name="shopping_url" value="http://embercreations.co.uk/leather">
+				<div class="price">&pound;15.00</div>
+				<input class="cart" type="submit" name="submit" value="Add to Cart">
+			</form>
+		</section>
+	</article>
+	<input type="checkbox" id="id-wallet-expand" class="expand">
+	<article class=" product expandable">
+		<label for="id-wallet-expand" class="expander">
+			<h1>ID Wallet</h1>
+		</label>
+		<section class="expandee">
+			<h2>Description</h2>
+			<p class="product description">
+				Keep your money and cards handy without the temptation to fill up a bulky wallet. Has an open window at the front for an ID card.
+			</p>
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="business" value="orders@embercreations.co.uk">
+				<input type="hidden" name="cmd" value="_cart">
+				<input type="hidden" name="add" value="1">
+				<input type="hidden" name="item_name" value="ID Wallet">
+				<input type="hidden" name="amount" value="20.00">
+				<input type="hidden" name="currency_code" value="GBP">
+				<h2>Colour</h2>
+				<input type="hidden" name="on0" value="Colour">
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Natural" checked>
+					<div class="colour natural"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Mahogany">
+					<div class="colour saddle-tan"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Saddle Tan">
+					<div class="colour mahogany"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Dark Brown">
+					<div class="colour dk-brown"></div>
+				</label>
+				<div class="price">&pound;20.00</div>
+				<input type="hidden" name="shopping_url" value="http://embercreations.co.uk/leather">
+				<input class="cart" type="submit" name="submit" value="Add to Cart">
+			</form>
+		</section>
+	</article>
+	<input type="checkbox" id="pen-pot-expand" class="expand">
+	<article class=" product expandable">
+		<label for="pen-pot-expand" class="expander">
+			<h1>Pen Pot</h1>
+		</label>
+		<section class="expandee">
+			<h2>Description</h2>
+			<p class="product description">
+				Keeping it classy, on your desk.
+			</p>
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="business" value="orders@embercreations.co.uk">
+				<input type="hidden" name="cmd" value="_cart">
+				<input type="hidden" name="add" value="1">
+				<input type="hidden" name="item_name" value="Pen Pot">
+				<input type="hidden" name="amount" value="16.00">
+				<input type="hidden" name="currency_code" value="GBP">
+				<h2>Colour</h2>
+				<input type="hidden" name="on0" value="Colour">
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Natural" checked>
+					<div class="colour natural"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Mahogany">
+					<div class="colour saddle-tan"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Saddle Tan">
+					<div class="colour mahogany"></div>
+				</label>
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="Dark Brown">
+					<div class="colour dk-brown"></div>
+				</label>
+				<div class="price">&pound;16.00</div>
+				<input type="hidden" name="shopping_url" value="http://embercreations.co.uk/leather">
+				<input class="cart" type="submit" name="submit" value="Add to Cart">
+			</form>
+		</section>
+	</article>
 </section>

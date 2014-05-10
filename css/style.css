@@ -13,162 +13,223 @@ border     | #b0b0b0
 */
 
 html{
-  font-family:sans-serif;
-  background-color:#f4f0ee;
+	font-family:sans-serif;
+	background-color:#f4f0ee;
 }
 html *{
-  margin:auto auto;
+	margin:auto auto;
 }
 body{
-  width:100%;
-  max-width:60rem;;
-  color:#424242;
+	width:100%;
+	max-width:60rem;;
+	color:#424242;
 }
 header{
-  width:100%;
-  max-width:40rem;
-  max-height:60%;
-  min-height:11rem;
-  margin:0 auto;
-  background-color:#ececec;
-  border-bottom:0.14rem solid #d0d0d0;
+	width:100%;
+	max-width:40rem;
+	max-height:60%;
+	min-height:11rem;
+	margin:0 auto;
+	background-color:#ececec;
+	border-bottom:0.14rem solid #d0d0d0;
 }
 header a{
-  text-decoration:none;
+	text-decoration:none;
 }
 header h1, header nav{
-  text-align:center;
+	text-align:center;
 }
 
 /* general */
 a{
-  color:#424242;
-  font-weight:bold;
+	color:#424242;
+	font-weight:bold;
 }
 header h1 a{
-  padding:0 0.4rem 0.2rem 0.4rem;
-  border-radius:0.2rem;
+	padding:0 0.4rem 0.2rem 0.4rem;
+	border-radius:0.2rem;
 }
 nav a:hover,header h1 a:hover{
-  background-color:#d0d0d0;
-  color:#994433;
+	background-color:#d0d0d0;
+	color:#994433;
 }
 .coming-soon{
-  color:#8a8a8a;
-  position:relative;
+	color:#8a8a8a;
+	position:relative;
 }
 a.coming-soon:hover:after{
-  content:"coming soon";
-  position:absolute;
-  left:0;
-  top:92%; /* TODO:needs better fix - sometimes gaps */
-  width:7rem; /* should change depending on content */
-  padding:0.1rem 0.1rem 0.2rem 0.1rem;
-  border-radius:0 0rem 0.2rem 0.2rem;
-  text-align:center;
-  font-size:90%;
-  font-style:italic;
-  background-color:#d0d0d0;
+	content:"coming soon";
+	position:absolute;
+	left:0;
+	top:92%; /* TODO:needs better fix - sometimes gaps */
+	width:7rem; /* should change depending on content */
+	padding:0.1rem 0.1rem 0.2rem 0.1rem;
+	border-radius:0 0rem 0.2rem 0.2rem;
+	text-align:center;
+	font-size:90%;
+	font-style:italic;
+	background-color:#d0d0d0;
 }
 nav>ul{
-  padding:0.2rem 0 0 0;}
+	padding:0.2rem 0 0 0;}
 nav li{
-  margin:0 auto;
-  display:inline-block;
-  font-size:1.2rem;
-  list-style:none outside none;
+	margin:0 auto;
+	display:inline-block;
+	font-size:1.2rem;
+	list-style:none outside none;
 }
 nav li a{
-  padding:0.2rem 0.4rem;
-  border-radius:0.2rem 0.2rem 0 0;
+	padding:0.2rem 0.4rem;
+	border-radius:0.2rem 0.2rem 0 0;
 }
 
 /* logo */
 svg.logo{
-  width:100%;
-  height:14rem;
-  max-height:60%;
-  padding:0.2rem;
-  fill:#424242;
-  /* margin-left:20%; */
+	width:100%;
+	height:14rem;
+	max-height:60%;
+	padding:0.2rem;
+	fill:#424242;
+	/* margin-left:20%; */
 }
 svg.logo:hover{
-  stroke:#994433;
-  stroke-width:5;
+	stroke:#994433;
+	stroke-width:5;
 }
 /* products */
 article.product{
-  border:2px solid #b0b0b0;
-  border-radius:6px;
-  margin:0.5rem;
-  background-color:#ececec;
-  display:inline-block;
+	border:0.2rem solid #b0b0b0;
+	border-radius:0.4rem;
+	margin:0.5rem auto;
+	max-width:45rem;
+	background-color:#ececec;
+	display:inline-block;
+}
+.product.description{
+	margin:0.8em;
 }
 .product form{
-  margin:0.5rem;
+	margin:0.5rem;
 }
 .product h1{
-  font-size:1.4rem;
+	padding:0.2rem;
+	padding-right:0.4rem;
+	background-color:#d0d0d0;
+	background-color:rgba(208,208,208,0.75);
+	font-size:1.4rem;
 }
 .product h2{
-  font-size:1.2rem;
-  margin:0.6rem 0 0.4rem 0;
+	font-size:1.2rem;
+	margin:0.6rem 0 0.4rem 0;
+}
+.product>*>h2{
+	margin-left: 0.4rem;
+}
+div.price{
+	display:block;
+	text-align:right;
+	font-weight:bold;
+}
+
+/* needed for degradation? */
+.expand+article.expandable>.expander{
+	display:block;
+	width:12rem;
+	height:12rem;
+	background-repeat:no-repeat;
+	-webkit-background-size:contain;
+	background-size:contain;
+	background-position:center;
+}
+.expand:checked+article.expandable>.expander{
+	width:auto;
+	height:auto;
+	background-image:none !important;
+}
+/* Individual product images */
+.expand#leather-belt-expand+.expandable>.expander{
+	background-image:url(../img/BeltDkBrown.jpg);
+}
+.expand#leather-notebook-expand+.expandable>.expander{
+	background-image:url(../img/NotebookPocket.jpg);
+}
+.expand#pen-pot-expand+.expandable>.expander{
+	background-image:url(../img/PencilPot.jpg);
+}
+.expand#id-wallet-expand+.expandable>.expander{
+	background-image:url(../img/IDWallet.jpg);
 }
 
 /* makes elements expandable */
-.expandable h1{
-  padding:0.2rem;
-  padding-right:0.4rem;
-  background-color:#d0d0d0;
-}
-.expandable h1:hover{
-    background-color:#b0b0b0;
+.expandable label:hover h1{
+	background-color:#b0b0b0;
+	background-color:rgba(176,176,176,0.8);
 }
 .expander{
-  cursor:pointer;
+	cursor:pointer;
 }
 input.expand{
-  display:none;
+	display:none;
 }
-input.expand~.expandee{
-  /* '~' for graceful degradation */
-  display:none;
+article.expandable>.expandee{
+	/* '~' for graceful degradation */
+	display:none;
 }
-input.expand:checked~.expandee{
-  display:block;
+input.expand:checked+article.expandable,
+input.expand:checked+article.expandable>.expandee{
+	display:block;
 }
 
 /* forms */
 form{
-  text-align:left;
+	text-align:left;
 }
 input{
-  display:inline-block;
-  padding:0.2rem;
-  margin:0 auto;
+	display:inline-block;
+	padding:0.2rem;
+	margin:0 auto;
 }
 input[type="submit"]{
-  display:block;
-  margin:0.2rem 0 0 auto;
-  padding:0.4rem;
-  border: 0.16rem solid #b0b0b0;
-  border-radius:0.2rem;
-  background-color:#994433;
-  color:#ececec;
-  font-weight:bold;
+	display:block;
+	margin:0.2rem 0 0 auto;
+	padding:0.4rem;
+	border:0.16rem solid #b0b0b0;
+	border-radius:0.2rem;
+	background-color:#994433;
+	color:#ececec;
+	font-weight:bold;
+	cursor: pointer;
+}
+input[type=submit]:hover{
+	background-color: #ee6c28;
 }
 
-/* makes img radio options better; TODO:svg */
+/* labels; TODO:svg */
+label{
+	display:inline-block;
+}
 label.visual-choice>input[type=radio]{
-  display:none;
+	display:none;
 }
-label.visual-choice>input[type=radio] + img{
-  cursor:pointer;
-  border:2px solid transparent;
+div.colour{
+	width:5rem;
+	height:5rem;
+	background-clip:content-box;
+	cursor:pointer;
+	border:2px solid transparent;
 }
-label.visual-choice>input[type=radio]:checked + img{
-  border:2px solid #994433
+.colour.natural{
+	background-color:#ffbb55;
 }
-label img{
-  display:inline-block;
+.colour.saddle-tan{
+	background-color:#bb6000;
+}
+.colour.mahogany{
+	background-color:#662204;
+}
+.colour.dk-brown{
+	background-color:#44220a;
+}
+label.visual-choice>input[type=radio]:checked+div.colour{
+	border:2px solid #994433
 }
