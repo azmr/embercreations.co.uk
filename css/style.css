@@ -95,13 +95,15 @@ nav li a{
 	border-radius:0.2rem 0.2rem 0 0;
 }
 
-/* logo */
+/* svg & logo */
+svg.icon{
+	fill:#424242;
+}
 svg.logo{
 	width:100%;
 	height:14rem;
 	max-height:60%;
 	padding:0.2rem;
-	fill:#424242;
 	/* margin-left:20%; */
 }
 svg.logo:hover, a:hover>svg.logo{
@@ -135,7 +137,7 @@ article.product{
 	margin:0.6rem 0 0.4rem 0;
 }
 .product>*>h2{
-	margin-left: 0.4rem;
+	margin-left:0.4rem;
 }
 div.price{
 	display:block;
@@ -210,10 +212,10 @@ input[type="submit"]{
 	background-color:#994433;
 	color:#ececec;
 	font-weight:bold;
-	cursor: pointer;
+	cursor:pointer;
 }
 input[type=submit]:hover{
-	background-color: #ee6c28;
+	background-color:#ee6c28;
 }
 
 /* labels; TODO:svg */
@@ -244,4 +246,32 @@ div.colour{
 }
 label.visual-choice>input[type=radio]:checked+div.colour{
 	border:2px solid #994433
+}
+
+/* Social */
+aside.social{
+	margin:0;
+	padding:0;
+	position:fixed;
+	width:auto;
+	bottom:0;
+	right:0;
+}
+aside.social>*{
+	display:inline-block;
+}
+.social.icon{
+	display:inline-block;
+	margin:0;
+	width:5rem;
+	height:5rem;
+	padding:0.6rem;
+	position:relative;
+	right:0;
+	bottom:0;
+	background-color:#d0d0d0;
+}
+.social.icon:hover{
+	transition:padding 200ms ease;
+	padding:1rem 0.6rem;
 }
