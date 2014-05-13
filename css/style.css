@@ -24,14 +24,22 @@ html{
 	padding:0;
 	font-family:"source-sans-pro" sans-serif;
 	background-color:#f4f0ee;
+	font-size:120%;
 }
 html *{
 	margin:auto auto;
 }
 body{
 	width:100%;
-	max-width:60rem;;
+	max-width:50rem;;
 	color:#424242;
+}
+h1,h2,h3,p{
+	display:block;
+	text-align:left;
+}
+p{
+	font-size: 1rem;
 }
 svg{
 	display:block;
@@ -94,6 +102,9 @@ nav li a{
 	padding:0.2rem 0.4rem;
 	border-radius:0.2rem 0.2rem 0 0;
 }
+section.major>h1{
+	padding-left:10%;
+}
 
 /* svg & logo */
 svg.icon{
@@ -112,12 +123,12 @@ svg.logo:hover, a:hover>svg.logo{
 }
 /* products */
 article.product{
+	display:inline-block;
 	border:0.2rem solid #b0b0b0;
 	border-radius:0.4rem;
-	margin:0.5rem auto;
-	max-width:45rem;
+	margin:0.2rem auto;
+	max-width:40rem;
 	background-color:#ececec;
-	display:inline-block;
 }
 .product.description{
 	margin:0.8em;
@@ -144,34 +155,40 @@ div.price{
 	text-align:right;
 	font-weight:bold;
 }
-
+.products{
+	text-align: center;
+}
 /* needed for degradation? */
-.expand+article.expandable>.expander{
+article.expandable>.expander{
 	display:block;
-	width:12rem;
-	height:12rem;
+	width:24rem;
+	max-width:400px;
+	height:24rem;
+	max-height:400px;
 	background-repeat:no-repeat;
 	-webkit-background-size:contain;
 	background-size:contain;
 	background-position:center;
 }
 .expand:checked+article.expandable>.expander{
+	margin:0 auto;
 	width:auto;
+	max-width:100%;
 	height:auto;
 	background-image:none !important;
 }
 /* Individual product images */
-.expand#leather-belt-expand+.expandable>.expander{
+#leather-belt-expand+.expandable>.expander{
 	background-image:url(../img/BeltDkBrown.jpg);
 }
-.expand#leather-notebook-expand+.expandable>.expander{
+#leather-notebook-expand+.expandable>.expander{
 	background-image:url(../img/NotebookPocket.jpg);
 }
-.expand#pen-pot-expand+.expandable>.expander{
-	background-image:url(../img/PencilPot.jpg);
-}
-.expand#id-wallet-expand+.expandable>.expander{
+#id-wallet-expand+.expandable>.expander{
 	background-image:url(../img/IDWallet.jpg);
+}
+#pen-pot-expand+.expandable>.expander{
+	background-image:url(../img/PencilPot.jpg);
 }
 
 /* makes elements expandable */
