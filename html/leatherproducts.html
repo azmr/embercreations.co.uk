@@ -28,15 +28,17 @@
 	<h1>Leather Products</h1>
 	<input type="checkbox" id="leather-belt-expand" class="expand" >
 	<article class="leather belt product expandable">
+		<label for="leather-belt-expand" class="expand-bg"></label>
 		<label for="leather-belt-expand" class="expander">
 			<h1>Leather Belt</h1>
 		</label>
 		<section class="expandee">
+			<label class="pop-down" for="leather-belt-expand"><h1>Leather Belt</h1></label>
 			<h2>Description</h2>
 			<p class="product description">
 				Made from soling leather, which is about the toughest leather available. With a solid brass buckle that can be polished again and again if it gets scratched, this belt will be with you for a while.
 			</p>
-			<form class="expandee" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
 				<!-- Identify your business so that you can collect the payments. -->
 				<input type="hidden" name="business" value="orders@embercreations.co.uk">
@@ -57,11 +59,11 @@
 					<div class="colour natural"></div>
 				</label>
 				<label class="visual-choice">
-					<input type="radio" name="os0" value="Mahogany">
+					<input type="radio" name="os0" value="Saddle Tan">
 					<div class="colour saddle-tan"></div>
 				</label>
 				<label class="visual-choice">
-					<input type="radio" name="os0" value="Saddle Tan">
+					<input type="radio" name="os0" value="Mahogany">
 					<div class="colour mahogany"></div>
 				</label>
 				<label class="visual-choice">
@@ -85,21 +87,29 @@
 	</article>
 	<input type="checkbox" id="leather-notebook-expand" class="expand">
 	<article class="leather notebook product expandable">
+		<label for="leather-notebook-expand" class="expand-bg"></label>
 		<label for="leather-notebook-expand" class="expander">
 			<h1>Leather Notebook</h1>
 		</label>
 		<section class="expandee">
+			<label for="leather-notebook-expand" class="pop-down"><h1>Leather Notebook</h1></label>
+			<h2>Description</h2>
 			<p class="product description">
 				Clairefontaine 90gsm paper hand-bound in Horween's Chromexcel leather - the perfect combination for a notebook that looks the business wherever you are. Just the right size to slip into a pocket or handbag and take with you everywhere.
 			</p>
-			<form class="expandee" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 				<input type="hidden" name="business" value="orders@embercreations.co.uk">
 				<input type="hidden" name="cmd" value="_cart">
 				<input type="hidden" name="add" value="1">
 				<input type="hidden" name="item_name" value="Pocket Leather Notebook">
 				<input type="hidden" name="amount" value="15.00">
 				<input type="hidden" name="currency_code" value="GBP">
-
+				<h2>Colour</h2>
+				<input type="hidden" name="on0" value="Colour">
+				<label class="visual-choice">
+					<input type="radio" name="os0" value="No. 8" checked>
+					<div class="colour no-8"></div>
+				</label>
 				<input type="hidden" name="shopping_url" value="http://embercreations.co.uk/leather">
 				<div class="price">&pound;15.00</div>
 				<input class="cart" type="submit" name="submit" value="Add to Cart">
@@ -108,10 +118,12 @@
 	</article>
 	<input type="checkbox" id="id-wallet-expand" class="expand">
 	<article class=" product expandable">
+		<label for="id-wallet-expand" class="expand-bg"></label>
 		<label for="id-wallet-expand" class="expander">
 			<h1>ID Wallet</h1>
 		</label>
 		<section class="expandee">
+			<label for="id-wallet-expand" class="pop-down"><h1>ID Wallet</h1></label>
 			<h2>Description</h2>
 			<p class="product description">
 				Keep your money and cards handy without the temptation to fill up a bulky wallet. Has an open window at the front for an ID card.
@@ -130,11 +142,11 @@
 					<div class="colour natural"></div>
 				</label>
 				<label class="visual-choice">
-					<input type="radio" name="os0" value="Mahogany">
+					<input type="radio" name="os0" value="Saddle Tan">
 					<div class="colour saddle-tan"></div>
 				</label>
 				<label class="visual-choice">
-					<input type="radio" name="os0" value="Saddle Tan">
+					<input type="radio" name="os0" value="Mahogany">
 					<div class="colour mahogany"></div>
 				</label>
 				<label class="visual-choice">
@@ -149,10 +161,12 @@
 	</article>
 	<input type="checkbox" id="pen-pot-expand" class="expand">
 	<article class=" product expandable">
+		<label for="pen-pot-expand" class="expand-bg"></label>
 		<label for="pen-pot-expand" class="expander">
 			<h1>Pen Pot</h1>
 		</label>
 		<section class="expandee">
+			<label for="pen-pot-expand" class="pop-down"><h1>Pen/Pencil Pot</h1></label>
 			<h2>Description</h2>
 			<p class="product description">
 				Keeping it classy, on your desk.
@@ -171,11 +185,11 @@
 					<div class="colour natural"></div>
 				</label>
 				<label class="visual-choice">
-					<input type="radio" name="os0" value="Mahogany">
+					<input type="radio" name="os0" value="Saddle Tan">
 					<div class="colour saddle-tan"></div>
 				</label>
 				<label class="visual-choice">
-					<input type="radio" name="os0" value="Saddle Tan">
+					<input type="radio" name="os0" value="Mahogany">
 					<div class="colour mahogany"></div>
 				</label>
 				<label class="visual-choice">
