@@ -1,6 +1,3 @@
-ember creations
-===============
-
 What I do
 ---------
 
